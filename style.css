@@ -13,8 +13,11 @@ body{
 }
 
 .right-banner{
+    display: flex;
     width: 45%;
     position: relative; 
+    align-items: center;
+    justify-content: center;
 
 }
 .right-banner img {
@@ -65,13 +68,12 @@ body{
 }
 
 input{
-    border-radius: 4px;
+    border-radius: 7px;
     border-style: solid;
     border-width: 1px;
     border-color: #E5E7EB;
     width: 23rem;
     height: 2rem;
-
 }
 
 .form-container{
@@ -116,14 +118,14 @@ form div{
     justify-content: center;
     align-items: center;
     background-color: rgb(28, 169, 224);
-    color: white;
-    border: none;
+    color: black;
     border-radius: 5px;
     width: 15rem;
     height: 3rem;
     font-size: 1rem; 
     margin-bottom: 3%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
 }
 
 #create:hover{
@@ -138,7 +140,41 @@ form div{
     margin-left: 8%;
     margin-top: 4%;
 }
+
 a{
     text-decoration: none;
     color: rgb(28, 169, 224);
+}
+
+a:hover{
+    color: black;
+}
+
+input:invalid:focus{
+    border-color: red;
+}
+
+input:not(:placeholder-shown):invalid {
+    border-color: red;
+  }
+
+ input:valid {
+    border-color: rgb(28, 169, 224);
+}
+
+input:focus{
+outline: none;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.photo-ref{
+    position: absolute;
+    color: white;
+    bottom: 2%;
+}
+
+.photo-ref a {
+    margin-left: 4px;
+    color: white;
+    text-decoration: underline;
 }
